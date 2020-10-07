@@ -21,14 +21,14 @@ public class Application {
 
 	}
 
-//Writes all abstract fields of the class to a file
+//Writes all abstract fields of the class to a file.
 	public static void getAnnotationToFile(Class<?> customClass) throws IOException {
-		// write all marked fields to array
+		// write all marked fields to array.
 		Field[] fields = customClass.getDeclaredFields();
-		// run through array with a variable
+		// run through array with a variable.
 		for (int i = 0; i < fields.length; i++) {
 			Field field = fields[i];
-			// check if field has Annotation from CarInfo Annotation
+			// check if field has Annotation from CarInfo Annotation.
 			if (field.getAnnotation(CarInfo.class) instanceof CarInfo) {
 				String name = field.getName();
 				String params = field.getAnnotation(CarInfo.class).value();
@@ -42,9 +42,9 @@ public class Application {
 		}
 	}
 
-	// toInstant converts to object with which you can work
-	// atZone does sets time zone
-	// toLocalDate does converts to LocalDate object
+	// toInstant converts to object with which you can work.
+	// atZone does sets time zone.
+	// toLocalDate does converts to LocalDate object.
 	public static LocalDate convertToLocalDateViaInstant(Date dateToConvert) {
 		return dateToConvert.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 	}

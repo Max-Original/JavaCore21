@@ -1,7 +1,7 @@
 package javacore21;
 
 public class Car{
-	
+	//Annotation filed
 	@CarInfo("Nice car")
 	private String brand;
 	@CarInfo("maybe you need more?")
@@ -43,7 +43,5 @@ public class Car{
 	public String toString() {
 		return "Car [brand=" + brand + ", horsePower=" + horsePower + ", price=" + price + "]";
 	}
-	
-	
 }
 
